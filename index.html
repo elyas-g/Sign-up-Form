@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <sidebar>
+    <div class="sidebar">
       <div>
         <img src="odin-lined.png" alt="Logo" />
         <p>ODIN</p>
@@ -16,7 +16,7 @@
         Photo by <a href="#">Halie West</a>on
         <a href="#">Unsplash</a>
       </p>
-    </sidebar>
+    </div>
     <main>
       <div>
         <p>
@@ -28,41 +28,56 @@
       </div>
       <form>
         <fieldset class="info-input">
+          <legend>Let's do this!</legend>
           <fieldset>
-            <legend>Let's do this!</legend>
-            <fieldset>
-              <label for="first-name">
-                FIRST NAME <br />
-                <input type="text" />
-              </label>
-              <label for="email">
-                EMAIL <br />
-                <input type="text" />
-              </label>
-              <label for="password">
-                PASSWORD <br />
-                <input type="password" />
-              </label>
-            </fieldset>
-            <fieldset>
-              <label for="last-name">
-                LAST NAME <br />
-                <input type="text" />
-              </label>
-              <label for="phone-number">
-                PHONE NUMBER <br />
-                <input type="tel" />
-              </label>
-              <label for="confirm-password">
-                CONFIRM PASSWORD <br />
-                <input type="password" />
-              </label>
-            </fieldset>
+            <label for="first-name">
+              FIRST NAME
+              <input type="text" required />
+            </label>
+            <label for="email">
+              EMAIL
+              <input
+                type="email"
+                pattern="\w*@gmail\.com"
+                placeholder="abebe@gmail.com"
+                required
+              />
+            </label>
+            <label for="password">
+              PASSWORD
+              <input
+                type="password"
+                pattern=".{8,}/"
+                placeholder="at least length of 8 character"
+                required
+              />
+            </label>
+          </fieldset>
+          <fieldset>
+            <label for="last-name">
+              LAST NAME
+              <input type="text" required />
+            </label>
+            <label for="phone-number">
+              PHONE NUMBER
+              <input
+                type="tel"
+                pattern="\+251-\d{3}-\d{3}-\d{3}"
+                placeholder="+251-986-004-563"
+                required
+              />
+            </label>
+            <label for="confirm-password">
+              CONFIRM PASSWORD
+              <input type="password" required />
+            </label>
           </fieldset>
         </fieldset>
         <fieldset class="submit-section">
-          <button type="submit">Create Account</button>
-          <p>Already have an account? Log in</p>
+          <div>
+            <button type="submit">Create Account</button>
+          </div>
+          <p>Already have an account? <a href="#">Log in</a></p>
         </fieldset>
       </form>
     </main>
